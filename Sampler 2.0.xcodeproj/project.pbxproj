@@ -12,9 +12,12 @@
 		CB9440D121963043003324F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9440CF21963043003324F8 /* Main.storyboard */; };
 		CB9440D321963044003324F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9440D221963044003324F8 /* Assets.xcassets */; };
 		CB9440D621963044003324F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9440D421963044003324F8 /* LaunchScreen.storyboard */; };
+		F708373E40D523E473159299 /* Pods_Sampler_2_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89467B187E811995D95EABC /* Pods_Sampler_2_0.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27E71E68924D8AC31ABD83F5 /* Pods-Sampler 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sampler 2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sampler 2.0/Pods-Sampler 2.0.debug.xcconfig"; sourceTree = "<group>"; };
+		3D09A0FDF3C8D0C43E4F5D84 /* Pods-Sampler 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sampler 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sampler 2.0/Pods-Sampler 2.0.release.xcconfig"; sourceTree = "<group>"; };
 		CB9440C821963043003324F8 /* Sampler 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sampler 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9440CB21963043003324F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9440CD21963043003324F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		CB9440D221963044003324F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB9440D521963044003324F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB9440D721963044003324F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D89467B187E811995D95EABC /* Pods_Sampler_2_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sampler_2_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F708373E40D523E473159299 /* Pods_Sampler_2_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A347B234EF2555AE7DFDF28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27E71E68924D8AC31ABD83F5 /* Pods-Sampler 2.0.debug.xcconfig */,
+				3D09A0FDF3C8D0C43E4F5D84 /* Pods-Sampler 2.0.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		451A215E60F7C6BBFC5BF1F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D89467B187E811995D95EABC /* Pods_Sampler_2_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB9440BF21963043003324F8 = {
 			isa = PBXGroup;
 			children = (
 				CB9440CA21963043003324F8 /* Sampler 2.0 */,
 				CB9440C921963043003324F8 /* Products */,
+				2A347B234EF2555AE7DFDF28 /* Pods */,
+				451A215E60F7C6BBFC5BF1F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB9440DA21963044003324F8 /* Build configuration list for PBXNativeTarget "Sampler 2.0" */;
 			buildPhases = (
+				12862C7CF3BA76D49CAA65D9 /* [CP] Check Pods Manifest.lock */,
 				CB9440C421963043003324F8 /* Sources */,
 				CB9440C521963043003324F8 /* Frameworks */,
 				CB9440C621963043003324F8 /* Resources */,
+				BF29DCC7B890CA02FD48DB70 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12862C7CF3BA76D49CAA65D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sampler 2.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF29DCC7B890CA02FD48DB70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sampler 2.0/Pods-Sampler 2.0-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwiftExt.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sampler 2.0/Pods-Sampler 2.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB9440C421963043003324F8 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		CB9440DB21963044003324F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27E71E68924D8AC31ABD83F5 /* Pods-Sampler 2.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		CB9440DC21963044003324F8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D09A0FDF3C8D0C43E4F5D84 /* Pods-Sampler 2.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
