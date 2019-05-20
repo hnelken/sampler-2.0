@@ -15,6 +15,7 @@ class DrumMachineViewController: UIViewController {
     @IBOutlet var pads: [UIButton]!
 
     private let bag = DisposeBag()
+    private let viewModel = DrumMachineViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,28 +27,19 @@ class DrumMachineViewController: UIViewController {
     }
 
     private func setupButtonBindings() {
-        Observable
-            .from(pads.map { $0.rx.buttonOnTouchUpInside() })
+        Observable.from(pads.map { $0.rx.buttonOnTouchUpInside() })
             .merge()
-            .subscribe(onNext: { button in
-                button.backgroundColor = .lightGray
+            .subscribe(onNext: { [weak self] button in
+                guard let self = self else { return }
+                button.backgroundColor = self.viewModel.normalButtonColor
             }).disposed(by: bag)
 
         Observable.from(pads.map { $0.rx.buttonOnTouchDown() })
             .merge()
-            .subscribe(onNext: { button in
-                button.backgroundColor = .red
+            .subscribe(onNext: { [weak self] button in
+                guard let self = self else { return }
+                button.backgroundColor = self.viewModel.pressedButtonColor
             }).disposed(by: bag)
-
     }
 }
 
-extension Reactive where Base: UIButton {
-    func buttonOnTouchDown() -> Observable<UIButton> {
-        return controlEvent(.touchDown).map { self.base }
-    }
-
-    func buttonOnTouchUpInside() -> Observable<UIButton> {
-        return tap.map { self.base }
-    }
-}

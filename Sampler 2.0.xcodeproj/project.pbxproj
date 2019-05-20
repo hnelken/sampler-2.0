@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB591339228F4A9800D34E6D /* DrumMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB591338228F4A9800D34E6D /* DrumMachineViewModel.swift */; };
+		CB59133B228F51A900D34E6D /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB59133A228F51A900D34E6D /* RxExtensions.swift */; };
 		CB9440CC21963043003324F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9440CB21963043003324F8 /* AppDelegate.swift */; };
 		CB9440CE21963043003324F8 /* DrumMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9440CD21963043003324F8 /* DrumMachineViewController.swift */; };
 		CB9440D121963043003324F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9440CF21963043003324F8 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* Begin PBXFileReference section */
 		27E71E68924D8AC31ABD83F5 /* Pods-Sampler 2.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sampler 2.0.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sampler 2.0/Pods-Sampler 2.0.debug.xcconfig"; sourceTree = "<group>"; };
 		3D09A0FDF3C8D0C43E4F5D84 /* Pods-Sampler 2.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sampler 2.0.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sampler 2.0/Pods-Sampler 2.0.release.xcconfig"; sourceTree = "<group>"; };
+		CB591338228F4A9800D34E6D /* DrumMachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumMachineViewModel.swift; sourceTree = "<group>"; };
+		CB59133A228F51A900D34E6D /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
 		CB9440C821963043003324F8 /* Sampler 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sampler 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB9440CB21963043003324F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB9440CD21963043003324F8 /* DrumMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrumMachineViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB59133C228F51F200D34E6D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CB59133D228F520400D34E6D /* DrumMachine */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CB59133D228F520400D34E6D /* DrumMachine */ = {
+			isa = PBXGroup;
+			children = (
+				CB9440CD21963043003324F8 /* DrumMachineViewController.swift */,
+				CB591338228F4A9800D34E6D /* DrumMachineViewModel.swift */,
+			);
+			path = DrumMachine;
+			sourceTree = "<group>";
+		};
+		CB59133E228F521C00D34E6D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CB9440CF21963043003324F8 /* Main.storyboard */,
+				CB9440D421963044003324F8 /* LaunchScreen.storyboard */,
+				CB9440D221963044003324F8 /* Assets.xcassets */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		CB9440BF21963043003324F8 = {
 			isa = PBXGroup;
 			children = (
@@ -78,12 +109,11 @@
 		CB9440CA21963043003324F8 /* Sampler 2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				CB9440CB21963043003324F8 /* AppDelegate.swift */,
-				CB9440CD21963043003324F8 /* DrumMachineViewController.swift */,
-				CB9440CF21963043003324F8 /* Main.storyboard */,
-				CB9440D221963044003324F8 /* Assets.xcassets */,
-				CB9440D421963044003324F8 /* LaunchScreen.storyboard */,
 				CB9440D721963044003324F8 /* Info.plist */,
+				CB9440CB21963043003324F8 /* AppDelegate.swift */,
+				CB59133A228F51A900D34E6D /* RxExtensions.swift */,
+				CB59133C228F51F200D34E6D /* Scenes */,
+				CB59133E228F521C00D34E6D /* UI */,
 			);
 			path = "Sampler 2.0";
 			sourceTree = "<group>";
@@ -206,7 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9440CE21963043003324F8 /* DrumMachineViewController.swift in Sources */,
+				CB591339228F4A9800D34E6D /* DrumMachineViewModel.swift in Sources */,
 				CB9440CC21963043003324F8 /* AppDelegate.swift in Sources */,
+				CB59133B228F51A900D34E6D /* RxExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
