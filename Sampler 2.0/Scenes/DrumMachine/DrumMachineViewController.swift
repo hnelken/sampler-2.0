@@ -14,6 +14,10 @@ class DrumMachineViewController: UIViewController {
 
     @IBOutlet var pads: [UIButton]!
 
+    private lazy var soundIDs: [Int] = {
+        return [Int](repeating: Sounds.defaultSoundID, count: pads.count)
+    }()
+
     private let bag = DisposeBag()
     private let viewModel = DrumMachineViewModel()
 
@@ -32,6 +36,7 @@ class DrumMachineViewController: UIViewController {
             .subscribe(onNext: { [weak self] button in
                 guard let self = self else { return }
                 button.backgroundColor = self.viewModel.normalButtonColor
+                self.playSound(atIndex: button.tag)
             }).disposed(by: bag)
 
         Observable.from(pads.map { $0.rx.buttonOnTouchDown() })
@@ -40,6 +45,11 @@ class DrumMachineViewController: UIViewController {
                 guard let self = self else { return }
                 button.backgroundColor = self.viewModel.pressedButtonColor
             }).disposed(by: bag)
+    }
+
+    private func playSound(atIndex index: Int) {
+        let soundID = soundIDs[index]
+        Sounds.playSound(withID: soundID)
     }
 }
 
